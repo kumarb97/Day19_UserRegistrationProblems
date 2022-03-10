@@ -91,4 +91,23 @@ public class UserRegistration {
     	}
     }
     
+    /*
+   	 * Method validPassword is used to take input from user and
+   	 * check whether its matches with the given condition/criteria of valid Password. 
+   	 */
+    public static void validPassword() {
+    	
+    	System.out.println("Enter Password");
+    	String name = sc.nextLine();
+    	String condition = "[a-z]{8,16}";
+    	Pattern p = Pattern.compile(condition);
+    	Matcher m = p.matcher(name);
+    	boolean check = m.matches();
+    	if(check == true) {
+    		System.out.println("It is a valid Password");
+    	}
+    	else {
+    		System.out.println("It is not a valid password, Enter minimum 8 characters");
+    	}
+    }
 }

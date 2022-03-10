@@ -1,6 +1,7 @@
 /**
- *@PROBLEM_STATEMENT : UC4
- * As a User need to enter a valid Mobile Number 
+ *@PROBLEM_STATEMENT : UC5_Rule-1
+ * As a User need to enter a Password
+ * having minimum 8 characters
  * @author Kumar Bamankar
  */
 package userregistration;
@@ -23,6 +24,7 @@ public class UserRegistrationMain {
 		System.out.println("\nEnter 2 : To check Lastname is valid");
 		System.out.println("\nEnter 3 : To check Emailid is valid");
 		System.out.println("\nEnter 4 : To check Mobile Number is valid");
+		System.out.println("\nEnter 5 : To check Password is valid");
 		
 	}
 	
@@ -39,8 +41,9 @@ public class UserRegistrationMain {
 	 * 2.Creating a method validLastName to validate Last name.
 	 * 3.Creating a method validEmailid to validate Email Address.
 	 * 4.Creating a method validMobileNumber to validate Mobile Number.
-	 * 4.Creation a method display to display welcome message and take choice from the user.
-	 * 5.Using switch case to implement user's choice.	
+	 * 5.Creating a method validPassword to validate Password.
+	 * 6.Creation a method display to display welcome message and take choice from the user.
+	 * 7.Using switch case to implement user's choice.	
 	 */
 		
 		display();
@@ -58,6 +61,9 @@ public class UserRegistrationMain {
 			break;
 		case 4 :
 			UserRegistration.validMobileNumber();
+			break;
+		case 5 :
+			UserRegistration.validPassword();
 			break;
 		}
 		
