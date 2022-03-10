@@ -1,7 +1,7 @@
 /**
- *@PROBLEM_STATEMENT : UC1
- * As a User need to enter a valid First Name
- * First name starts with Cap and has minimum 3 character
+ *@PROBLEM_STATEMENT : UC2
+ * As a User need to enter a valid Last Name
+ * Last name starts with Cap and has minimum 3 character
  * @author Kumar Bamankar
  *
  */
@@ -14,7 +14,7 @@ public class UserRegistrationMain {
 	/*
 	 * Method display is used to to display welcome message and to take choice
 	 * from user what he/she wants to do.
-	 * In this use case only valid first name option is available.
+	 * In this use case valid first name and Last name option is available.
 	 * 
 	 */
 	public static void display() {
@@ -22,6 +22,7 @@ public class UserRegistrationMain {
 		System.out.println("USER REGISTRATION");
 		System.out.println("_________________________");
 		System.out.println("\nEnter 1 : To valid first name");
+		System.out.println("\nEnter 2 : To valid Last name");
 		
 	}
 	
@@ -45,7 +46,10 @@ public class UserRegistrationMain {
 		
 		case 1 :
 			UserRegistration.validFirstName();
-			break;		
+			break;
+		case 2 :
+			UserRegistration.validLastName();
+			break;
 		}
 		
 	}

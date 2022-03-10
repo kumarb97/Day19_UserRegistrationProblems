@@ -12,7 +12,7 @@ public class UserRegistration {
 	
 	/*
 	 * Method validFirstName is used to take input from user and
-	 * check whether its matches with the given condition/criteria of valid name
+	 * check whether its matches with the given condition/criteria of valid first name
 	 * 
 	 */
 	public static void validFirstName() {
@@ -24,7 +24,27 @@ public class UserRegistration {
 		Matcher m = p.matcher(name);
 		boolean check = m.matches();
 		if(check == true) {
-			System.out.println("It is a valid name");
+			System.out.println("It is a valid First name");
+		}
+		else {
+			System.out.println("It is not a valid name, Please enter valid name");
+		}
+	}
+	
+	/*
+	 * Method validLastName is used to take input from user and
+	 * check whether its matches with the given condition/criteria of valid last name 
+	 */
+    public static void validLastName() {
+		
+		System.out.println("Enter Last Name");
+		String name = sc.nextLine();
+		String condition = "[A-Z]{1}[a-z]+";
+		Pattern p = Pattern.compile(condition);
+		Matcher m = p.matcher(name);
+		boolean check = m.matches();
+		if(check == true) {
+			System.out.println("It is a valid Last name");
 		}
 		else {
 			System.out.println("It is not a valid name, Please enter valid name");
