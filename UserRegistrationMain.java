@@ -1,7 +1,7 @@
 /**
- *@PROBLEM_STATEMENT : UC6_Rule-2
+ *@PROBLEM_STATEMENT : UC7_Rule-8
  * As a User need to enter a Password
- * having minimum 8 characters and have one uppercase atleast
+ * having minimum 8 characters and have one uppercase letter atleast and have one number atleast
  * @author Kumar Bamankar
  */
 package userregistration;
