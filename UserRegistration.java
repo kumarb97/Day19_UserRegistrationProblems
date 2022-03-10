@@ -59,7 +59,7 @@ public class UserRegistration {
     	
     	System.out.println("Enter Email Address");
 		String name = sc.nextLine();
-		String condition = "[A-z a-z 0-9 + -]+([.]{1}[a-z 0-9]+)*[@][a-z 0-9]{1,5}([.][com]{2,3})+([. a-z]{2,3})?";
+		String condition = "[A-z a-z 0-9 + -]+([.]{1}[a-z 0-9]+)*[@][a-z 0-9]{1,5}([.][a-z]{2,3})+([. a-z]{2,3})?";
 		Pattern p = Pattern.compile(condition);
 		Matcher m = p.matcher(name);
 		boolean check = m.matches();

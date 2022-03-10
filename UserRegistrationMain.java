@@ -1,10 +1,6 @@
 /**
- *@PROBLEM_STATEMENT : UC8_Rule-4
- * As a User need to enter a Password
- * Having minimum 8 characters.
- * Having one uppercase letter atleast.
- * Having one number atleast.
- * Having one special character atleast.
+ *@PROBLEM_STATEMENT : UC9_
+ *Should clear all email samples provided.
  * @author Kumar Bamankar
  */
 package userregistration;
@@ -23,6 +19,7 @@ public class UserRegistrationMain {
 		System.out.println("_________________________");
 		System.out.println("USER REGISTRATION");
 		System.out.println("_________________________");
+		System.out.println("\nEnter 0 : To check first name is valid");
 		System.out.println("\nEnter 1 : To check first name is valid");
 		System.out.println("\nEnter 2 : To check Lastname is valid");
 		System.out.println("\nEnter 3 : To check Emailid is valid");
@@ -48,11 +45,14 @@ public class UserRegistrationMain {
 	 * 6.Creation a method display to display welcome message and take choice from the user.
 	 * 7.Using switch case to implement user's choice.	
 	 */
-		
+		int option;
+		do {
 		display();
-		int option = sc.nextInt();
+		option = sc.nextInt();
 		switch(option) {
 		
+		case 0 :
+			System.exit(0);
 		case 1 :
 			UserRegistration.validFirstName();
 			break;
@@ -69,7 +69,20 @@ public class UserRegistrationMain {
 			UserRegistration.validPassword();
 			break;
 		}
+		}while (option != 0);
 		
 	}
 
 }
+
+/* A. Valid Emails to check
+* 1. abc@yahoo.com
+* 2. abc-100@yahoo.com
+* 3. abc.100@yahoo.com
+* 2. abc111@abc.com
+* 4. abc-100@abc.net
+* 5. abc.100@abc.com.au
+* 6. abc@1.com
+* 7. abc@gmail.com.com
+* 8. abc+100@gmail.com
+*/
