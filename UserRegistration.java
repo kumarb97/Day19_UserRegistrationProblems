@@ -71,4 +71,24 @@ public class UserRegistration {
 		}
     }
     
+    /*
+   	 * Method validMobileNumber is used to take input from user and
+   	 * check whether its matches with the given condition/criteria of valid Mobile Number. 
+   	 */
+    public static void validMobileNumber() {
+    	
+    	System.out.println("Enter Last Name");
+    	String name = sc.nextLine();
+    	String condition = "[91]{1}[0-9]{10}";
+    	Pattern p = Pattern.compile(condition);
+    	Matcher m = p.matcher(name);
+    	boolean check = m.matches();
+    	if(check == true) {
+    		System.out.println("It is a valid Last name");
+    	}
+    	else {
+    		System.out.println("It is not a valid name, Please enter valid name");
+    	}
+    }
+    
 }
