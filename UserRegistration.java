@@ -99,7 +99,7 @@ public class UserRegistration {
     	
     	System.out.println("Enter Password");
     	String name = sc.nextLine();
-    	String condition = "(?=.*[A-Z])(?=.*[0-9])[a-z A-Z 0-9]{8,}";
+    	String condition = "(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*_<>/',.])[a-z A-Z 0-9 ~!@#$%^&*_<>/',.]{8,}";
     	Pattern p = Pattern.compile(condition);
     	Matcher m = p.matcher(name);
     	boolean check = m.matches();
