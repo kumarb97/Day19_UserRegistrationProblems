@@ -77,17 +77,17 @@ public class UserRegistration {
    	 */
     public static void validMobileNumber() {
     	
-    	System.out.println("Enter Last Name");
+    	System.out.println("Enter Mobile Number");
     	String name = sc.nextLine();
-    	String condition = "[91]{1}[0-9]{10}";
+    	String condition = "[91]{2}[0-9]{10}";
     	Pattern p = Pattern.compile(condition);
     	Matcher m = p.matcher(name);
     	boolean check = m.matches();
     	if(check == true) {
-    		System.out.println("It is a valid Last name");
+    		System.out.println("It is a valid Mobile Number");
     	}
     	else {
-    		System.out.println("It is not a valid name, Please enter valid name");
+    		System.out.println("It is not a valid Number, Please enter valid Mobile Number");
     	}
     }
     
