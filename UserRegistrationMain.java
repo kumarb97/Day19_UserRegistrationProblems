@@ -1,9 +1,11 @@
 /**
- *@PROBLEM_STATEMENT : UC2
- * As a User need to enter a valid Last Name
- * Last name starts with Cap and has minimum 3 character
+ *@PROBLEM_STATEMENT : UC3
+ * As a User need to enter a valid Email id
+ * E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl
+ * & co) and 2 optional (xyz & in) with
+ * precise @ and . positions
+ * 
  * @author Kumar Bamankar
- *
  */
 package userregistration;
 
@@ -21,8 +23,9 @@ public class UserRegistrationMain {
 		System.out.println("_________________________");
 		System.out.println("USER REGISTRATION");
 		System.out.println("_________________________");
-		System.out.println("\nEnter 1 : To valid first name");
-		System.out.println("\nEnter 2 : To valid Last name");
+		System.out.println("\nEnter 1 : To check first name is valid");
+		System.out.println("\nEnter 2 : To check Lastname is valid");
+		System.out.println("\nEnter 3 : To check Emailid is valid");
 		
 	}
 	
@@ -35,9 +38,11 @@ public class UserRegistrationMain {
 		
 	/*
 	 * PROCEDURE :
-	 * 1.Creating a method vaidFirstName to validate first name.
-	 * 2.Creation a method display to display welcome message and take choice from the user.
-	 * 3.Using switch case to implement user's choice.	
+	 * 1.Creating a method validFirstName to validate first name.
+	 * 2.Creating a method validLastName to validate Last name.
+	 * 3.Creating a method validEmailid to validate Email Address.
+	 * 4.Creation a method display to display welcome message and take choice from the user.
+	 * 5.Using switch case to implement user's choice.	
 	 */
 		
 		display();
@@ -49,6 +54,9 @@ public class UserRegistrationMain {
 			break;
 		case 2 :
 			UserRegistration.validLastName();
+			break;
+		case 3 :
+			UserRegistration.validEmailid();
 			break;
 		}
 		

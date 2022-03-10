@@ -50,4 +50,25 @@ public class UserRegistration {
 			System.out.println("It is not a valid name, Please enter valid name");
 		}
 	}
+    
+    /*
+	 * Method validEmailid is used to take input from user and
+	 * check whether its matches with the given condition/criteria of valid Email id. 
+	 */
+    public static void validEmailid() {
+    	
+    	System.out.println("Enter Email Address");
+		String name = sc.nextLine();
+		String condition = "[A-z a-z 0-9 + -]+([.]{1}[a-z 0-9]+)*[@][a-z 0-9]{1,5}([.][com]{2,3})+([. a-z]{2,3})?";
+		Pattern p = Pattern.compile(condition);
+		Matcher m = p.matcher(name);
+		boolean check = m.matches();
+		if(check == true) {
+			System.out.println("It is a Valid Email");
+		}
+		else {
+			System.out.println("It is not a valid Email, Please Enter valid Email");
+		}
+    }
+    
 }
